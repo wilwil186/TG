@@ -1,0 +1,128 @@
+% Pacotes
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+% \usepackage{enumitem} % Comentamos o eliminamos esta línea
+\usepackage{float}
+\usepackage[utf8]{inputenc}	
+\usepackage[spanish]{babel}
+\usepackage{caption}
+\usepackage{hyperref}
+
+
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Cores personalizadas
+\definecolor{PROFMATgreen}{RGB}{0, 138, 163}
+\definecolor{UFTgreen}{RGB}{0, 137, 124}
+\definecolor{UFTblue}{RGB}{0, 84, 132}
+\definecolor{UFTyellow}{RGB}{253, 185, 46}
+\definecolor{UFTgray}{RGB}{132, 134, 136}
+
+% Ativar numeração de tabelas
+\setbeamertemplate{caption}[numbered]
+
+% Ajustes de colores y estilos
+\setbeamercolor*{structure}{bg=UFTgreen,fg=black}
+
+\setbeamercolor*{palette primary}{fg=black,bg=PROFMATgreen}
+\setbeamercolor*{palette secondary}{fg=white,bg=UFTblue}
+\setbeamercolor*{palette tertiary}{fg=black,bg=UFTgreen}
+\setbeamercolor*{palette quaternary}{fg=white,bg=black}
+
+\setbeamercolor{section in toc}{fg=black,bg=white}
+\setbeamercolor{alerted text}{fg=white}
+
+\setbeamercolor*{item}{fg=PROFMATgreen}
+
+\setbeamercolor{block title}{bg=UFTgreen,fg=white}
+\setbeamercolor{block body}{bg=UFTgray!10,fg=black}
+
+\setbeamercolor{titlelike}{fg=white, bg=UFTblue}
+\setbeamercolor{frametitle}{bg=UFTgray!20,fg=UFTgreen}
+
+% Personalizar la página de título
+\setbeamertemplate{title page}{
+    \vbox{}
+\begin{minipage}{0.2\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{UD.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.2\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{BBVA.png}
+    \end{minipage}
+    
+    %\vfill
+    \vskip1em\par
+    \begingroup
+        \centering
+        \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=false]{title}
+            \usebeamerfont{title}\inserttitle\par%
+            \ifx\insertsubtitle\@empty%
+            \else%
+                \vskip0.25em%
+                {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+            \fi%
+        \end{beamercolorbox}%
+        \vskip1em\par
+        \begin{beamercolorbox}[sep=6pt,center]{author}
+            \usebeamerfont{author}\insertauthor
+        \end{beamercolorbox}
+        \vskip0.2em\par
+        \begin{beamercolorbox}[sep=5pt,center]{advisor}
+            \usebeamerfont{institute} \advisorname
+        \end{beamercolorbox}
+        \vskip0.2em\par
+        \begin{beamercolorbox}[sep=5pt,center]{institute}
+            \usebeamerfont{institute}\insertinstitute
+        \end{beamercolorbox}
+        \vskip0.2em\par
+        \begin{beamercolorbox}[sep=5pt,center]{date}
+            \usebeamerfont{institute}\insertdate
+        \end{beamercolorbox}
+        \vskip0.5em\par
+    \endgroup
+    \vfill
+}
+
+% Remover bordes redondeados de los bloques
+\makeatletter
+\setbeamertemplate{blocks}[default]
+\makeatother
+
+
+\setbeamercolor{bibliography entry author}{fg=black}
+\setbeamertemplate{bibliography item}{\newblock}
+
+\setbeamertemplate{frametitle continuation}{}
+
+% Ajustes de separadores en figuras y tablas
+\captionsetup[figure]{labelformat=simple, labelsep=endash, textformat=period, font=footnotesize}
+\captionsetup[table]{labelformat=simple, labelsep=endash, textformat=period, font=footnotesize}
+
+% Espaciado antes y después de las leyendas
+\captionsetup[figure]{aboveskip=2pt, belowskip=0pt}
+\captionsetup[table]{aboveskip=2pt, belowskip=0pt}
+
+% Ajustes de guiones y tolerancia
+\hyphenpenalty=10000
+\tolerance=10000
+
+% Personalización del estilo del índice
+\setbeamertemplate{section in toc}[sections numbered]
+\renewcommand{\thesection}{\textcolor{PROFMATgreen}{\arabic{section}}}
+\renewcommand{\thesubsection}{\textcolor{PROFMATgreen}{\arabic{section}.\arabic{subsection}}}
+
+\setbeamersize{text margin left=0.8cm, text margin right=0.8cm}
