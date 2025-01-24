@@ -13,7 +13,8 @@
 %% TÍTULO DEL TRABAJO
 \titulodeltrabajo{ Extracción de Insights Clave para la Toma de Decisiones a partir de Comentarios Negativos de Detractores del Banco BBVA}
 
-%% NOMBRE DE LOS AUTORES Y EL DIRECTOR PRIMER ARGUMENTO AUTORES Y SEGUNDO EL DIRECTOR
+%% NOMBRE DE LOS AUTORES Y EL DIRECTOR 
+%% PRIMER ARGUMENTO AUTORES Y SEGUNDO EL DIRECTOR
 \autoresydirector{Wilson Eduardo Jerez Hernández}{Luis Alejandro Masmela Caita}{John Pablo Calvo López}
 
 %% MES Y AÑO DE LA PRESENTACIÓN DEL TRABAJO
@@ -24,7 +25,7 @@
 \maketitle
 
 \section*{Resumen}
-Este trabajo presenta el desarrollo de un modelo de análisis de sentimientos basado en técnicas de Machine Learning, con el objetivo de clasificar y obtener insights a partir de comentarios negativos emitidos por los detractores del Banco BBVA. El propósito principal es identificar áreas de mejora en los servicios del banco para aumentar la satisfacción del cliente y reducir el número de detractores. Para lograrlo, se emplea procesamiento de lenguaje natural (NLP) sobre datos textuales obtenidos de redes sociales y encuestas internas.
+Este trabajo presenta el desarrollo de un modelo de análisis de sentimientos basado en técnicas de \textit{Machine Learning}, con el objetivo de clasificar y obtener insights a partir de comentarios negativos emitidos por los detractores del Banco BBVA. El propósito principal es identificar áreas de mejora en los servicios del banco para aumentar la satisfacción del cliente y reducir el número de detractores. Para lograrlo, se emplea procesamiento de lenguaje natural (\textit{NLP}) sobre datos textuales obtenidos de redes sociales y encuestas internas.
 
 \section*{Palabras Clave}
 Machine Learning, Análisis de Sentimiento, NLP, BBVA, Clientes Detractores.
@@ -42,22 +43,20 @@ A John Calvo, gracias por tu guía, paciencia y enseñanzas. Tu apoyo fue clave 
 
 Este trabajo es fruto del esfuerzo de todos, y les estaré siempre agradecido.
 
-
 \newpage
-
 \tableofcontents
 \newpage
+
 \section{Introducción}
 El sector bancario ha experimentado transformaciones profundas debido a la creciente digitalización, la evolución en las expectativas de los clientes y una competencia cada vez más feroz. En este entorno, la capacidad de captar y analizar la retroalimentación de los clientes se ha vuelto esencial para las entidades bancarias que desean adaptarse rápidamente a las demandas del mercado. Los comentarios negativos, en particular, representan una fuente valiosa de información, ya que pueden revelar problemas recurrentes o áreas de oportunidad que, si se abordan correctamente, podrían traducirse en una mayor satisfacción y fidelización de los clientes.
 
-En este contexto, BBVA Colombia ha tomado la iniciativa de implementar un modelo de análisis de sentimientos utilizando técnicas avanzadas de Machine Learning. Este modelo se enfoca en la clasificación y análisis de los comentarios emitidos por los detractores, aquellos clientes que han expresado insatisfacción o frustración con los servicios ofrecidos. El objetivo principal de este enfoque es identificar de manera eficiente las áreas críticas de mejora, permitiendo a BBVA Colombia realizar ajustes estratégicos que mejoren la experiencia del cliente y reduzcan el índice de detractores.
+En este contexto, BBVA Colombia ha tomado la iniciativa de implementar un modelo de análisis de sentimientos utilizando técnicas avanzadas de \textit{Machine Learning}. Este modelo se enfoca en la clasificación y análisis de los comentarios emitidos por los detractores, aquellos clientes que han expresado insatisfacción o frustración con los servicios ofrecidos. El objetivo principal de este enfoque es identificar de manera eficiente las áreas críticas de mejora, permitiendo a BBVA Colombia realizar ajustes estratégicos que mejoren la experiencia del cliente y reduzcan el índice de detractores.
 
-Para lograrlo, se emplea el procesamiento de lenguaje natural (NLP), una rama de la inteligencia artificial que permite analizar y comprender grandes volúmenes de datos textuales de manera automatizada. Las fuentes de estos datos incluyen redes sociales, donde los clientes expresan sus opiniones de forma pública, y encuestas internas del banco, que proporcionan una visión más detallada y directa de las experiencias de los usuarios. A través de este análisis, BBVA Colombia busca convertir los comentarios negativos en oportunidades de mejora, fortaleciendo así su oferta de valor y consolidando su posición en un mercado altamente competitivo.
+Para lograrlo, se emplea el procesamiento de lenguaje natural (\textit{NLP}), una rama de la inteligencia artificial que permite analizar y comprender grandes volúmenes de datos textuales de manera automatizada. Las fuentes de estos datos incluyen redes sociales, donde los clientes expresan sus opiniones de forma pública, y encuestas internas del banco, que proporcionan una visión más detallada y directa de las experiencias de los usuarios. A través de este análisis, BBVA Colombia busca convertir los comentarios negativos en oportunidades de mejora, fortaleciendo así su oferta de valor y consolidando su posición en un mercado altamente competitivo.
 
-\newpage
 \section{Objetivos} 
 \subsection{Objetivo General} 
-Desarrollar un modelo de análisis de sentimiento basado en técnicas de Machine Learning que permita extraer insights clave a partir de los comentarios negativos emitidos por los detractores del Banco BBVA Colombia, con el fin de proporcionar información estratégica que facilite la toma de decisiones en la alta gerencia y contribuya a la mejora continua de los servicios ofrecidos.
+Desarrollar un modelo de análisis de sentimiento basado en técnicas de \textit{Machine Learning} que permita extraer \textit{insights} clave a partir de los comentarios negativos emitidos por los detractores del Banco BBVA Colombia, con el fin de proporcionar información estratégica que facilite la toma de decisiones en la alta gerencia y contribuya a la mejora continua de los servicios ofrecidos.
 
 \subsection{Objetivos Específicos}
 \begin{enumerate}
@@ -100,7 +99,6 @@ BBVA Colombia ha sido pionera en la transformación digital del sector bancario 
 \subsubsection{Inversión en Tecnología y Desarrollo Sostenible}
 En 2023, BBVA Colombia realizó una inversión récord de más de \$235.000 millones en tecnología, con el fin de renovar sus aplicaciones móviles y expandir su oferta de productos 100\% digitales. Esta apuesta por la innovación digital ha fortalecido la competitividad del banco en un mercado cada vez más digitalizado. Además, ese mismo año, BBVA Colombia registró un crecimiento del 98\% en financiación sostenible, movilizando \$6,7 billones para proyectos con impacto social y medioambiental, reafirmando su compromiso con el desarrollo sostenible y el bienestar de las comunidades. \cite{4}
 
-
 \subsection{Análisis de Texto y Modelado de Tópicos para la Identificación de Áreas de Insatisfacción en Clientes Detractores}
 El análisis de texto y el modelado de tópicos son herramientas clave para comprender las preocupaciones de los clientes detractores. Este marco teórico describe los conceptos principales utilizados en este estudio, con un enfoque en cómo estas técnicas permiten identificar áreas de insatisfacción y mejorar la toma de decisiones estratégicas.
 
@@ -108,120 +106,82 @@ El análisis de texto y el modelado de tópicos son herramientas clave para comp
 
 El análisis de texto es el proceso de extraer información significativa de grandes volúmenes de datos no estructurados, como los comentarios de los clientes. Las técnicas clave que se implementan en este estudio incluyen el \textbf{TF-IDF Vectorizer}, \textbf{stemming} y \textbf{lematización}, cada una de las cuales se describe a continuación \cite{8}.
 
-
-\paragraph{TF-IDF Vectorizer (\(\text{TF-IDF}(t,d,D)\))}: Es una técnica de procesamiento de texto que transforma los comentarios en representaciones vectoriales numéricas, permitiendo analizar la frecuencia de términos. TF-IDF (\textit{Term Frequency-Inverse Document Frequency}) pondera la importancia de una palabra según su frecuencia en un documento, pero también teniendo en cuenta cuántos documentos contienen esa palabra.
-
-La fórmula de TF-IDF para una palabra \(t\) en un documento \(d\) dentro de un conjunto de documentos \(D\) es:
+\paragraph{TF-IDF Vectorizer (\(\text{TF-IDF}(t,d,D)\))}
+Es una técnica de procesamiento de texto que transforma los comentarios en representaciones vectoriales numéricas, permitiendo analizar la frecuencia de términos dentro de un documento, así como su relevancia en el conjunto total de documentos. TF-IDF (\textit{Term Frequency-Inverse Document Frequency}) pondera la importancia de una palabra según su frecuencia en un documento, pero también considerando cuántos documentos contienen esa palabra. Esto permite resaltar términos distintivos y atenuar la influencia de palabras demasiado comunes.
 
 \[
-\text{TF-IDF}(t, d, D) = \text{TF}(t, d) \times \text{IDF}(t, D)
+\text{TF-IDF}(t, d, D) \;=\; \text{TF}(t, d) \;\times\; \text{IDF}(t, D)
 \]
 
-Donde:
+\noindent\textbf{Donde:}
 \begin{itemize}
-    \item \(\text{TF}(t, d)\) es la \textit{frecuencia del término} \(t\) en el documento \(d\). Se calcula como el número de veces que aparece el término \(t\) dividido por el número total de términos en el documento.
+    \item \(\text{TF}(t,d)\): \textit{Frecuencia del término} \(t\) en el documento \(d\). Se calcula como:
     \[
-    \text{TF}(t,d) = \frac{\text{número de veces que el término } t \text{ aparece en el documento } d}{\text{Total de términos en el documento } d}
+    \text{TF}(t,d) = \frac{\text{número de veces que el término } t \text{ aparece en } d}{\text{total de términos en } d}
     \]
-    \item \(\text{IDF}(t, D)\) es la \textit{frecuencia inversa del documento}, y se calcula como:
+    \item \(\text{IDF}(t,D)\): \textit{Frecuencia inversa de documento}, que mide cuán ``raro'' o ``específico'' es el término \(t\) en el corpus \(D\). Se calcula como:
     \[
-    \text{IDF}(t,D) = \ln \left( \frac{\text{Número total de documentos en el corpus } D}{\text{número de documentos que contienen el término } t} \right)
+    \text{IDF}(t,D) = \ln\!\Biggl(\frac{\text{Número total de documentos en el corpus}}{\text{Número de documentos que contienen el término } t}\Biggr)
     \]
-\textbf{Nota:} Se puede sumar un 1 al numerador y al denominador para evitar divisiones entre 0.
+    
+    En la práctica, para evitar la indeterminación cuando algún término aparece en todos o en ningún documento, suele utilizarse una forma suavizada, sumando 1 al numerador y al denominador.
+    
 \end{itemize}
 
-Este factor pondera menos las palabras que son comunes en muchos documentos.
+\noindent\textbf{Observación:} Este factor \(\text{IDF}\) reduce el peso de las palabras muy frecuentes (que suelen resultar poco informativas) y realza aquellas que son más distintivas en el corpus.
 
-Por ejemplo, consideremos dos documentos (comentarios):
+\vspace{0.5em}
+\noindent
+\textbf{Ejemplo ilustrativo.} Considere dos documentos (comentarios) tras eliminar \textit{stopwords} y aplicar lematización:
+\begin{itemize}
+    \item Documento 1: ``producto'', ``llegar'', ``tarde''
+    \item Documento 2: ``servicio'', ``deficiente''
+\end{itemize}
 
-- Documento 1: \textit{``El producto llegó tarde''}
+El vocabulario resultante es: \{``producto'', ``llegar'', ``tarde'', ``servicio'', ``deficiente''\}. 
 
-- Documento 2: \textit{``El servicio es deficiente''}
-
-Después de eliminar las \textit{stopwords} como ``el'' y aplicar lematización, obtenemos:
-
-- Documento 1: \textit{``producto'', ``llegar'', ``tarde''}
-
-- Documento 2: \textit{``servicio'', ``deficiente''}
-
-El vocabulario total es: \{``producto'', ``llegar'', ``tarde'', ``servicio'', ``deficiente''\}.
-
-Calculamos la TF (Frecuencia de Término) para cada palabra en cada documento:
-
-Para Documento 1:
-
+La frecuencia de término (\(\text{TF}\)) en cada documento se calcula dividiendo la cantidad de apariciones de la palabra entre el número total de palabras del documento. Para Documento 1:
 \[
-\text{TF}(\text{término}, \text{Doc1}) = \frac{\text{Frecuencia del término en Doc1}}{\text{Total de términos en Doc1}} = \frac{1}{3} \approx 0.333
+\text{TF}(\text{término}, \text{Doc1}) = \frac{1}{3} \approx 0.333
 \]
-
-Para Documento 2:
-
+y para Documento 2:
 \[
 \text{TF}(\text{término}, \text{Doc2}) = \frac{1}{2} = 0.5
 \]
 
-Calculamos la IDF (Frecuencia Inversa de Documento) para cada término:
-
+Luego, la \(\text{IDF}\) (\textit{Frecuencia Inversa de Documento}) se obtiene aplicando el logaritmo de la razón entre el número total de documentos y el número de documentos en los que aparece el término. Para el corpus con 2 documentos:
 \[
-\text{IDF}(\text{término}, D) = \ln \left( \frac{\text{Número total de documentos}}{\text{Número de documentos que contienen el término}} \right)
+\text{IDF}(t,D) = \ln \Bigl(\frac{2}{\text{documentos que contienen } t}\Bigr)
+\]
+siendo, por ejemplo, \(\ln(2)=0.693\) cuando el término aparece en 1 de los 2 documentos.
+
+Multiplicando TF e IDF, se obtienen los valores finales de TF-IDF para cada palabra, determinando así su relevancia. Por ejemplo, para Documento 1:
+\[
+\text{TF-IDF}(\text{producto}, \text{Doc1}) = 0.333 \times 0.693 \approx 0.231
+\]
+mientras que para Documento 2:
+\[
+\text{TF-IDF}(\text{servicio}, \text{Doc2}) = 0.5 \times 0.693 \approx 0.347
 \]
 
-Aplicando esto:
+Estos vectores numéricos cuantifican la importancia de cada término, y son empleados por algoritmos de \textit{Machine Learning} para procesos como la clasificación o el agrupamiento de documentos. En términos prácticos, \(\text{TF-IDF}\) es un método robusto y sencillo de interpretar que beneficia la detección de términos verdaderamente relevantes en grandes volúmenes de texto.
 
-- Para ``producto'': \(\text{IDF} = \ln \left( \frac{2}{1} \right) = 0.693\)
+\paragraph{Stemming} 
+El \textit{stemming} consiste en recortar las palabras hasta su forma o raíz más simple, eliminando sufijos y otras terminaciones. En español, por ejemplo, las palabras \textit{``amando"}, \textit{``amar"} y \textit{``amaba"} se reducirían a la raíz \textit{``am"}. Aunque esta técnica unifica ciertas variantes, puede perder información semántica y no siempre refleja la forma correcta de la palabra en un diccionario.
 
-- Para ``llegar'': \(\text{IDF} = \ln \left( \frac{2}{1} \right) = 0.693\)
-
-- Para ``tarde'': \(\text{IDF} = \ln \left( \frac{2}{1} \right) = 0.693\)
-
-- Para ``servicio'': \(\text{IDF} = \ln \left( \frac{2}{1} \right) = 0.693\)
-
-- Para ``deficiente'': \(\text{IDF} = \ln \left( \frac{2}{1} \right) = 0.693\)
-
-Calculamos el TF-IDF multiplicando TF por IDF para cada término en cada documento:
-
-Para Documento 1:
-
-- \(\text{TF-IDF}(\text{producto}, \text{Doc1}) = 0.333 \times 0.693 \approx 0.231\)
-
-- \(\text{TF-IDF}(\text{llegar}, \text{Doc1}) = 0.333 \times 0.693 \approx 0.231\)
-
-- \(\text{TF-IDF}(\text{tarde}, \text{Doc1}) = 0.333 \times 0.693 \approx 0.231\)
-
-Para Documento 2:
-
-- \(\text{TF-IDF}(\text{servicio}, \text{Doc2}) = 0.5 \times 0.693 \approx 0.347\)
-
-- \(\text{TF-IDF}(\text{deficiente}, \text{Doc2}) = 0.5 \times 0.693 \approx 0.347\)
-
-Los vectores TF-IDF resultantes son:
-
-- Documento 1: \([0.231\ (\text{producto}),\ 0.231\ (\text{llegar}),\ 0.231\ (\text{tarde}),\ 0,\ 0]\)
-
-- Documento 2: \([0,\ 0,\ 0,\ 0.347\ (\text{servicio}),\ 0.347\ (\text{deficiente})]\)
-
-Estos vectores numéricos representan la importancia de cada término en el contexto del corpus y son utilizados por algoritmos de Machine Learning para el análisis y clasificación de textos.
-
-
-\paragraph{Stemming} : El stemming es un proceso para reducir las palabras a su raíz o forma base. En español, por ejemplo, las palabras \textit{``amando"}, \textit{``amar"} y \textit{``amaba"} se reducirían a la raíz \textit{``am"}, lo que ayuda a simplificar el análisis eliminando variaciones gramaticales que no añaden significado adicional. Aunque el stemming puede resultar útil, no siempre conserva el significado exacto de las palabras, ya que recorta las terminaciones sin considerar el contexto.
-
-\paragraph{Lematización} : A diferencia del stemming, la lematización transforma una palabra en su forma base (o lema) teniendo en cuenta el contexto y la gramática. Por ejemplo, la palabra \textit{``corriendo"} se lematiza a \textit{``correr"}. En el análisis de texto, la lematización es fundamental para agrupar términos relacionados, mejorando la precisión de los resultados.
-
+\paragraph{Lematización}
+A diferencia del \textit{stemming}, la lematización transforma cada palabra a su \textit{forma base} o \textit{lema}, teniendo en cuenta su contexto y la gramática de la oración. Por ejemplo, el término \textit{``corriendo"} se convertiría en \textit{``correr"}. Este proceso ayuda a agrupar variaciones de la misma palabra, mejorando la coherencia semántica del análisis y usualmente incrementando la precisión en tareas de clasificación.
 
 \subsubsection{Modelado de Tópicos con LDA}
-El \textbf{Latent Dirichlet Allocation (LDA)} es una técnica de modelado de tópicos que permite identificar los temas más comunes en un conjunto de documentos. El LDA asume que cada documento es una mezcla de varios temas y que cada tema está compuesto por un conjunto de palabras clave. Por ejemplo, en los comentarios de clientes, podríamos identificar dos temas recurrentes: ``tiempos de entrega'' y ``calidad del producto'', a partir de términos como \textit{``tarde'', ``demora''} (para el primer tema) y \textit{``defectuoso'', ``malo''} (para el segundo).
+El \textbf{Latent Dirichlet Allocation (LDA)} es una técnica de modelado de tópicos que permite identificar los temas más comunes en un conjunto de documentos. El LDA asume que cada documento es una mezcla de varios temas y que cada tema está compuesto por un conjunto de palabras clave. Por ejemplo, en los comentarios de clientes, podrían encontrarse temas como ``tiempos de entrega'' o ``calidad del producto'', a partir de términos como \textit{``tarde'', ``demora''} (primer tema) y \textit{``defectuoso'', ``malo''} (segundo tema).\cite{9}
 
-
-El proceso de LDA implica asignar probabilidades a palabras y temas en un conjunto de documentos, lo que facilita el agrupamiento de comentarios en tópicos relevantes. Este enfoque es esencial para encontrar patrones comunes de insatisfacción entre los clientes detractores.\cite{9}
+El proceso de LDA asigna probabilidades a palabras y temas en todo el corpus, logrando un agrupamiento temático relevante. Esta aproximación permite descubrir tendencias de insatisfacción entre los clientes y ofrece a la gerencia la oportunidad de focalizar acciones concretas para mitigar quejas comunes.
 
 \subsubsection{Evaluación de Coherencia de Modelos}
-Para garantizar que los temas identificados sean útiles y consistentes, se calcula la coherencia de los modelos generados. La coherencia mide la interpretabilidad de los temas, asegurando que las palabras agrupadas dentro de cada tema tengan un significado coherente entre sí. Por ejemplo, un tema con palabras como \textit{``defectuoso", ``malo", ``roto"} tendría una coherencia alta porque las palabras están estrechamente relacionadas con problemas de calidad del producto.\cite{10}
+Para garantizar que los temas identificados con LDA sean útiles y consistentes, se calcula la coherencia de los modelos generados. La coherencia mide la interpretabilidad de los temas, asegurando que las palabras agrupadas dentro de cada tema tengan un significado coherente entre sí. Por ejemplo, un tema con palabras como \textit{``defectuoso", ``malo", ``roto"} posee alta coherencia, ya que todas están vinculadas a problemas de calidad \cite{10}.
 
 \subsubsection{Visualización de Resultados y Toma de Decisiones Estratégicas}
-Una vez identificados los temas clave, se generan visualizaciones que permiten comprender la distribución de los mismos en los comentarios. Estas visualizaciones ofrecen una representación gráfica de la prevalencia de cada tema, facilitando la toma de decisiones estratégicas.
-
-Por ejemplo, si un tema relacionado con  ``demoras en la entrega'' es predominante, esto sugiere un área de oportunidad para mejorar la logística de la empresa. La interpretación de estos resultados es fundamental para proponer soluciones que mejoren la experiencia del cliente y reduzcan el número de detractores.
-
+Una vez identificados los temas clave, se generan visualizaciones que muestran la distribución de estos en los comentarios. Este recurso ofrece un panorama claro de la prevalencia de cada tema y su relación con la insatisfacción del cliente. Por ejemplo, un tema predominante sobre ``demoras en la entrega'' apunta a la necesidad de optimizar procesos logísticos. Dicha interpretación permite priorizar las soluciones y reducir el número de detractores.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Descripción de los Datos}
@@ -236,13 +196,12 @@ Uno de los indicadores clave es la columna \textit{``Days\_To\_Resolve"}, que mi
 
 El conjunto de datos también incluye el \textit{``NPS Response"} (Net Promoter Score)\cite{5}, un índice que mide la disposición de los clientes a recomendar los servicios del banco. Este indicador es fundamental para evaluar el éxito de las estrategias de atención al cliente. Un puntaje bajo (de 0 a 6, clientes detractores) puede revelar problemas importantes en la calidad del servicio o en la resolución de quejas, mientras que un puntaje alto (9 o 10, promotores) indica que el cliente quedó satisfecho con su experiencia, a pesar de haber presentado una queja.
 
-Por último, las descripciones textuales de las quejas, incluidas en la columna \textit{``Complaint"}, representan un recurso valioso para aplicar técnicas de análisis de texto, como TF-IDF y modelado de tópicos. Estas técnicas permiten identificar palabras clave y temas recurrentes que impactan la satisfacción del cliente, revelando patrones o problemas sistémicos que no son evidentes a simple vista pero que requieren atención urgente.
-
+Por último, las descripciones textuales de las quejas, incluidas en la columna \textit{``Complaint"}, representan un recurso valioso para aplicar técnicas de análisis de texto, como \textit{TF-IDF} y modelado de tópicos. Estas técnicas permiten identificar palabras clave y temas recurrentes que impactan la satisfacción del cliente, revelando patrones o problemas sistémicos que no son evidentes a simple vista pero que requieren atención urgente.
 
 \newpage
 \section{Creación y Desarrollo del Modelo}
 
-El desarrollo del modelo para la identificación de temas en los comentarios de clientes se realizó con ayuda del lenguaje de programación \textit{Python} utilizando diversas herramientas y bibliotecas de procesamiento de lenguaje natural, como \textit{NLTK}, \textit{spaCy}, \textit{scikit-learn}, y \textit{Gensim}.
+El desarrollo del modelo para la identificación de temas en los comentarios de clientes se realizó con ayuda del lenguaje de programación \textit{Python}, utilizando diversas herramientas y bibliotecas de procesamiento de lenguaje natural, como \textit{NLTK}, \textit{spaCy}, \textit{scikit-learn}, y \textit{Gensim}.
 
 A continuación, se detalla el proceso de creación del modelo en etapas bien definidas, desde la preprocesamiento de los datos hasta la selección del número óptimo de temas utilizando el algoritmo \textbf{Latent Dirichlet Allocation} (LDA).
 
@@ -275,11 +234,8 @@ El flujo de trabajo seguido para desarrollar el modelo incluye los siguientes pa
     
     \item \textbf{Creación del Corpus}: Tras el preprocesamiento de los textos, se procede a la creación del \textit{corpus} y del diccionario de términos. Primero, los comentarios se tokenizan, es decir, se dividen en palabras individuales (tokens) y se eliminan las \textit{stopwords} utilizando la biblioteca \textit{spaCy}. Por ejemplo, la frase ``El servicio fue excelente y rápido'' se tokeniza y elimina las \textit{stopwords} para quedar como: ``servicio'', ``excelente'', ``rápido''. Luego, se genera un diccionario que contiene cada palabra única presente en los comentarios junto con su frecuencia de aparición. Este diccionario es la base para transformar el texto en su representación numérica.
     
-    \item \textbf{Aplicación de TF-IDF}: Para transformar los comentarios en representaciones vectoriales, se aplicó la técnica \textit{TF-IDF} (Term Frequency-Inverse Document Frequency), que pondera la importancia de cada palabra en función de su frecuencia dentro de un comentario específico y su aparición general en todo el conjunto de datos. La frecuencia de término (TF) mide cuántas veces aparece una palabra en un comentario, mientras que la frecuencia inversa de documentos (IDF) reduce el peso de palabras comunes que aparecen en la mayoría de los comentarios, destacando así términos más relevantes.
+    \item \textbf{Aplicación de TF-IDF}: Para transformar los comentarios en representaciones vectoriales, se aplicó la técnica \textit{TF-IDF} (Term Frequency-Inverse Document Frequency), que pondera la importancia de cada palabra en función de su frecuencia dentro de un comentario específico y su aparición general en todo el conjunto de datos. La frecuencia de término (TF) mide cuántas veces aparece una palabra en un comentario, mientras que la frecuencia inversa de documentos (IDF) reduce el peso de palabras comunes que aparecen en la mayoría de los comentarios, destacando así términos más relevantes. De esta manera, el modelo puede centrarse en los aspectos que realmente diferencian un comentario de otro.
 
-    Por ejemplo, la frase ``El servicio fue excelente y rápido'' se procesa eliminando \textit{stopwords}, quedando como: ``servicio'', ``excelente'', ``rápido''. Luego de aplicar TF-IDF, podría representarse numéricamente como un vector [0.3, 0.5, 0.3], donde cada valor refleja la importancia de las palabras ``servicio'', ``excelente'' y ``rápido'' en el contexto del \textit{corpus}. Esta técnica permite que el modelo priorice palabras significativas en lugar de aquellas que son meramente funcionales, facilitando un análisis más preciso de temas y patrones en los comentarios.
-
-    
     \item \textbf{Modelado de Tópicos con LDA}: Para identificar los temas subyacentes en los comentarios, se utilizó el modelo de \textit{Latent Dirichlet Allocation} (LDA), implementado mediante la biblioteca \texttt{Gensim} de Python. Este algoritmo asume que cada comentario es una combinación de varios temas y que cada tema está representado por un conjunto de palabras clave con ciertas probabilidades de aparición. A partir de esta premisa, el modelo clasifica automáticamente los comentarios en grupos temáticos relevantes.
 
     El número óptimo de temas fue determinado \textit{evaluando la coherencia} de cada modelo generado con diferentes cantidades de temas, utilizando también la biblioteca \texttt{Gensim}. La coherencia mide cuán interpretables y consistentes son las palabras agrupadas en cada tema, lo cual ayuda a identificar la estructura subyacente de los comentarios. Por ejemplo, después de entrenar el modelo, algunos temas identificados podrían estar relacionados con ``tiempo de espera'' o ``calidad del servicio'', destacando palabras como ``espera'', ``rápido'' y ``demora'' para el primer tema, y ``calidad'', ``malo'' y ``atención'' para el segundo.
@@ -287,7 +243,6 @@ El flujo de trabajo seguido para desarrollar el modelo incluye los siguientes pa
     Este enfoque permite al modelo LDA descomponer el conjunto de comentarios en temas representativos, facilitando la comprensión de los principales problemas o áreas de insatisfacción expresados por los clientes. Así, se puede analizar con mayor claridad cuáles son los factores recurrentes de insatisfacción y priorizar las acciones correctivas en las áreas que requieren atención.
 
     \item \textbf{Visualización de Resultados}: Finalmente, se generaron visualizaciones para mostrar la distribución de los temas en los comentarios, lo cual permite identificar las áreas más recurrentes de insatisfacción entre los clientes.
-
 \end{enumerate}
 
 \subsection{Pseudocódigo del Modelo}
@@ -392,7 +347,7 @@ Con base en los resultados obtenidos y el análisis realizado, se proponen las s
 
     \item \textbf{Desarrollo de modelos predictivos basados en NPS}: Se recomienda utilizar los resultados del análisis de los comentarios junto con el Net Promoter Score (NPS) para desarrollar modelos predictivos que permitan anticipar el comportamiento de los clientes. Estos modelos podrían ayudar a predecir la probabilidad de que un cliente se convierta en detractor o promotor, y permitirían tomar medidas preventivas para reducir la tasa de insatisfacción.
 
-    \item \textbf{Exploración de técnicas de análisis más avanzadas}: Aunque el modelo LDA ha sido útil para identificar los temas principales, sería interesante explorar técnicas más avanzadas como modelos basados en embeddings (por ejemplo, BERT o Word2Vec) que capturan mejor el contexto semántico de los comentarios. Estos modelos podrían proporcionar una visión más detallada de las preocupaciones de los clientes y ayudar a mejorar la clasificación de los comentarios.
+    \item \textbf{Exploración de técnicas de análisis más avanzadas}: Aunque el modelo LDA ha sido útil para identificar los temas principales, sería interesante explorar técnicas más avanzadas como modelos basados en \textit{embeddings} (por ejemplo, \textit{BERT} o \textit{Word2Vec}) que capturan mejor el contexto semántico de los comentarios. Estos modelos podrían proporcionar una visión más detallada de las preocupaciones de los clientes y ayudar a mejorar la clasificación de los comentarios.
 
     \item \textbf{Automatización de la retroalimentación}: Implementar sistemas automatizados que analicen los comentarios de forma continua, proporcionando reportes periódicos a la alta gerencia. Esta automatización permitiría una respuesta más rápida a los problemas emergentes y contribuiría a un ciclo de mejora continua.
 
@@ -400,8 +355,7 @@ Con base en los resultados obtenidos y el análisis realizado, se proponen las s
 
 \end{itemize}
 
-En resumen, estas recomendaciones buscan ampliar el alcance de las herramientas de análisis desarrolladas en este trabajo y proponen futuros estudios para seguir mejorando la experiencia del cliente y la toma de decisiones en BBVA, con el objetivo final de reducir el número de detractores y mejorar la satisfacción general.
-
+En síntesis, estas recomendaciones buscan ampliar el alcance de las herramientas de análisis desarrolladas y plantean líneas de estudio para perfeccionar la estrategia de atención al cliente en BBVA, con el objetivo de mejorar la satisfacción general y reducir el número de detractores.
 
 \section{Anexos}
 Los anexos de este trabajo incluyen el código desarrollado en Google Colab: \url{https://colab.research.google.com/drive/1AVMlirkqufPE-BpA9_ZLStWFVA-XSetJ?usp=sharing} y la Base de datos: \url{https://pub.towardsai.net/bank-complaints-fictional-data-b885cc907b7d}
@@ -421,3 +375,4 @@ Los anexos de este trabajo incluyen el código desarrollado en Google Colab: \ur
 \end{thebibliography}
 
 \end{document}
+
