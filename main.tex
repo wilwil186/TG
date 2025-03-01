@@ -1,7 +1,23 @@
 \documentclass{matematicasud}
+
+% ==================================================
+% PAQUETES PARA EVITAR DESBORDAMIENTOS DE TEXTO
+% ==================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}     % Fuente escalable que ayuda con la microtipografía
+\usepackage{microtype}   % Mejora la justificación del texto y corta palabras adecuadamente
+\usepackage[hyphens]{url}% Permite cortar URLs cuando se usan \url{} o \href{}
 \usepackage{hyperref}
-\usepackage{graphicx}
+\usepackage{breakcites}  % Si fuera necesario para cortar citas muy largas
+\sloppy                  % Opción rápida para evitar desbordamientos
+\emergencystretch=1em    % Ajusta la separación extra cuando el texto no cabe en la línea
+
+\usepackage{graphicx}    % Para insertar imágenes
 \usepackage{fontawesome5}
+\usepackage{url}
+...
+
 
 %% COMANDOS PERSONALIZADOS
     %% CONJUNTOS ESPECIALES
@@ -301,10 +317,11 @@ Como se muestra en la Figura \ref{fig:coherencia_temas}, la evaluación de coher
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{imagec.png}
+    \includegraphics[width=0.9\textwidth]{imagec.png} % 0.9 o 1.0 según prefieras
     \caption{Coherencia por número de temas.}
     \label{fig:coherencia_temas}
 \end{figure}
+
 
 \subsection{Distribución de los Temas Identificados}
 
@@ -362,6 +379,7 @@ Los anexos de este trabajo incluyen el código desarrollado en Google Colab: \ur
 
 \section{Referencias}
 \begin{thebibliography}{99}
+\sloppy  
 \bibitem{1} Nelson Salgado Reyes, Graciela Elizabeth Trujillo Moreno, «Análisis de sentimientos en datos de redes sociales: aplicación de técnicas de procesamiento de lenguaje natural y machine learning para analizar opiniones y sentimientos en datos de redes sociales,» 2024. URL: \url{https://dspace.itsjapon.edu.ec/xmlui/handle/123456789/4606}.
 \bibitem{2} BBVA, «BBVA Colombia, 60 años de historia,» BBVA.com, 2023. URL: \url{https://www.bbva.com/es/co/bbva-colombia-60-anos-historia/}.
 \bibitem{3} BBVA, «BBVA Colombia lidera la transformación digital del sector,» BBVA.com, 2023. URL: \url{https://www.bbva.com/es/bbva-colombia-lidera-la-transformacion-digital-del-sector/}.
