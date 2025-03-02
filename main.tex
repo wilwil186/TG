@@ -1,40 +1,45 @@
+\PassOptionsToPackage{hyphens}{url} % Permite cortes de línea en URLs
+
 \documentclass{matematicasud}
 
-% ==================================================
-% PAQUETES PARA EVITAR DESBORDAMIENTOS DE TEXTO
-% ==================================================
+% Codificación y tipografía
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}     % Fuente escalable que ayuda con la microtipografía
-\usepackage{microtype}   % Mejora la justificación del texto y corta palabras adecuadamente
-\usepackage[hyphens]{url}% Permite cortar URLs cuando se usan \url{} o \href{}
-\usepackage{hyperref}
-\usepackage{breakcites}  % Si fuera necesario para cortar citas muy largas
-\sloppy                  % Opción rápida para evitar desbordamientos
-\emergencystretch=1em    % Ajusta la separación extra cuando el texto no cabe en la línea
+\usepackage{lmodern}     
+\usepackage{microtype}
+\usepackage{fancyvrb}
+\usepackage{float}
 
+% Manejo de URLs sin volver a cargar hyperref
+\usepackage{xurl}  % Manejo avanzado de URLs largas
+
+% Otros paquetes de utilidad
 \usepackage{graphicx}    % Para insertar imágenes
 \usepackage{fontawesome5}
-\usepackage{url}
-...
+\usepackage{breakcites}  % Para romper citas largas en bibliografía
 
+% Evita desbordamiento de texto
+\sloppy                  
+\emergencystretch=1em    
 
-%% COMANDOS PERSONALIZADOS
-    %% CONJUNTOS ESPECIALES
+% Configurar opciones de hyperref sin recargarlo
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black,
+    citecolor=red
+}
+
+% Comandos personalizados
 \newcommand{\R}{\mathbb{R}}
-
-    %% OPERADORES MATEMÁTICOS
 \DeclareMathOperator{\dom}{dom}
 
-%% TÍTULO DEL TRABAJO
-\titulodeltrabajo{ Extracción de Insights Clave para la Toma de Decisiones a partir de Comentarios Negativos de Detractores del Banco BBVA}
-
-%% NOMBRE DE LOS AUTORES Y EL DIRECTOR 
-%% PRIMER ARGUMENTO AUTORES Y SEGUNDO EL DIRECTOR
+% Título y autores
+\titulodeltrabajo{Extracción de Insights Clave para la Toma de Decisiones a partir de Comentarios Negativos de Detractores del Banco BBVA}
 \autoresydirector{Wilson Eduardo Jerez Hernández}{Luis Alejandro Masmela Caita}{John Pablo Calvo López}
-
-%% MES Y AÑO DE LA PRESENTACIÓN DEL TRABAJO
 \mesyano{Diciembre}{2024}
+
 
 \begin{document}
 
@@ -137,7 +142,7 @@ Es una técnica de procesamiento de texto que transforma los comentarios en repr
     \]
     \item \(\text{IDF}(t,D)\): \textit{Frecuencia inversa de documento}, que mide cuán ``raro'' o ``específico'' es el término \(t\) en el corpus \(D\). Se calcula como:
     \[
-    \text{IDF}(t,D) = \ln\!\Biggl(\frac{\text{Número total de documentos en el corpus}}{\text{Número de documentos que contienen el término } t}\Biggr)
+    \text{IDF}(t,D) = \ln\!\Biggl(\frac{\text{número total de documentos en el corpus}}{\text{número de documentos que contienen el término } t}\Biggr)
     \]
     
     En la práctica, para evitar la indeterminación cuando algún término aparece en todos o en ningún documento, suele utilizarse una forma suavizada, sumando 1 al numerador y al denominador.
@@ -265,7 +270,8 @@ El flujo de trabajo seguido para desarrollar el modelo incluye los siguientes pa
 
 A continuación, se presenta el pseudocódigo que describe el proceso de desarrollo del modelo:
 
-\begin{verbatim}
+    
+\begin{verbatim}[breaklines=true]
 1. Descargar y configurar las herramientas de procesamiento de texto:
    - Instalar las bibliotecas necesarias: kneed, spacy, y googletrans.
    - Descargar el modelo de lenguaje en español de spaCy.
@@ -281,7 +287,8 @@ A continuación, se presenta el pseudocódigo que describe el proceso de desarro
 3. Preprocesar los comentarios de la categoría 'otro':
    - Filtrar los comentarios por la categoría específica.
    - Aplicar lematización y stemming en cada palabra de los comentarios:
-     - Lematizar cada palabra si no es una palabra vacía o un signo de puntuación, utilizando spaCy.
+     - Lematizar cada palabra si no es una palabra vacía o un signo de puntuación, 
+        utilizando spaCy.
      - Aplicar stemming a las palabras resultantes con SnowballStemmer.
 
 4. Crear un diccionario y corpus para el modelo LDA:
@@ -290,8 +297,10 @@ A continuación, se presenta el pseudocódigo que describe el proceso de desarro
    - Convertir los textos en un formato numérico (corpus) basado en el diccionario.
 
 5. Aplicar TF-IDF para representar los textos como vectores:
-   - Utilizar TF-IDF para ponderar las palabras según su frecuencia e importancia en el conjunto de datos.
-   - Establecer un número máximo de palabras a incluir en el análisis para evitar términos irrelevantes.
+   - Utilizar TF-IDF para ponderar las palabras según su frecuencia e importancia 
+   en el conjunto de datos.
+   - Establecer un número máximo de palabras a incluir en el análisis para evitar 
+   términos irrelevantes.
 
 6. Desarrollar el modelo LDA:
    - Para un rango de posibles números de temas (por ejemplo, de 3 a 6):
@@ -303,7 +312,8 @@ A continuación, se presenta el pseudocódigo que describe el proceso de desarro
 7. Visualización de Resultados:
    - Generar gráficos de coherencia en función del número de temas.
    - Visualizar la distribución de los temas en los comentarios.
-   - Etiquetar y mostrar las principales palabras de cada tema en gráficos para facilitar la interpretación.
+   - Etiquetar y mostrar las principales palabras de cada tema en gráficos para 
+   facilitar la interpretación.
 \end{verbatim}
 
 \newpage
@@ -315,24 +325,24 @@ El análisis de los comentarios en la categoría ``otro" utilizando el modelo \t
 
 Como se muestra en la Figura \ref{fig:coherencia_temas}, la evaluación de coherencia del modelo arrojó que el número óptimo de temas es \textbf{5}, ya que con este número se maximiza la coherencia de los temas identificados.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{imagec.png} % 0.9 o 1.0 según prefieras
     \caption{Coherencia por número de temas.}
     \label{fig:coherencia_temas}
 \end{figure}
 
-
 \subsection{Distribución de los Temas Identificados}
 
 En la Figura \ref{fig:distribucion_temas} se presenta la distribución de los temas en los comentarios analizados. El tema 1 es el más frecuente, con 19 comentarios, seguido de los temas 4 y 5 con 17 y 16 comentarios, respectivamente. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{imaged.png}
     \caption{Distribución de los temas en los comentarios de la categoría ``otro".}
     \label{fig:distribucion_temas}
 \end{figure}
+
 
 \subsection{Interpretación de los Tópicos}
 
@@ -391,6 +401,4 @@ Los anexos de este trabajo incluyen el código desarrollado en Google Colab: \ur
 \bibitem{9} David M. Blei, Andrew Y. Ng, Michael I. Jordan, «Latent Dirichlet Allocation,» Journal of Machine Learning Research, 3(2003), pp. 993-1022. URL: \url{https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf}.
 \bibitem{10} Florian Rosner, Andreas Hinneburg, Michael Röder, Matthias Nettling, Andreas Both, «Evaluating topic coherence measures,» NIPS 2013 Workshop on Topic Models: Computation, Application, and Evaluation, 2013. URL: \url{https://mimno.infosci.cornell.edu/nips2013ws/nips2013tm_submission_7.pdf}.
 \end{thebibliography}
-
 \end{document}
-
